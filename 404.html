@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="404files/style.css">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/TurboHK/turbohk.github.io/main/logo.ico">
+    <title>404 Not Found</title>
+</head>
+<body>
+    <section class="showcase">
+        <header>
+            <div class="logo">
+                <img src="https://raw.githubusercontent.com/TurboHK/turbohk.github.io/main/404files/logo.png" />
+                <h5>&nbsp;DigiLambent</h5>       
+            </div>
+            <div class="toggle"></div>
+        </header>
+
+        <video src="https://raw.githubusercontent.com/TurboHK/turbohk.github.io/main/404files/wave.mp4" muted loop autoplay></video>
+
+        <div class="overlay"></div>
+
+        <div class="text">
+            <h2>404 NOT FOUND</h2>
+            <h3>That’s an error.</h3>
+            <p>The requested URL was not found on this server. That’s all we know.</p>
+            <a href="https://www.digilambent.eu.org">Back to HOME</a>
+        </div>
+
+    </section>
+
+    <div class="menu">
+        <ul>
+            <li><a href="https://www.digilambent.eu.org/about">About</a></li>
+            <li><a href="https://www.digilambent.eu.org/services">Services</a></li>
+            <li><a href="https://www.digilambent.eu.org//copyright">Copyright</a></li>
+            <li><a href="https://www.digilambent.eu.org//termsofuse">Terms of Use</a></li>
+            <li><a href="https://www.digilambent.eu.org//privacypolicy">Privacy Policy</a></li>
+            <li><a href="https://www.digilambent.eu.org//ISMA">Contact</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.toggle');
+        const showcase = document.querySelector('.showcase');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            showcase.classList.toggle('active');
+        })
+    </script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');/* font-family: 'Fredericka the Great', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap'); /* font-family: 'Ms Madi', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap'); /* font-family: 'Fugaz One', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap'); /* font-family: 'Racing Sans One', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); /* font-family: 'Source Code Pro', monospace; */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.showcase{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    color: #fff;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+.showcase.active{
+    right: 300px;
+}
+
+.showcase header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.showcase video{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    object-fit: cover;
+}
+
+.logo{
+    width:60px;
+    display: flex;
+    align-items: center;
+}
+
+.logo h2{
+    white-space: nowrap;
+    margin-left: 10px;
+}
+
+.logo img{
+    width: 100%;
+}
+
+.logo h5{
+    font-size: 2em;
+    font-family: 'Fredericka the Great', cursive;
+}
+
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url('https://raw.githubusercontent.com/TurboHK/turbohk.github.io/main/404files/menu.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.toggle.active{
+    background: url('https://raw.githubusercontent.com/TurboHK/turbohk.github.io/main/404files/close.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+}
+
+.overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    
+    /* background: gold; */
+    mix-blend-mode: overlay;
+}
+
+.text{
+    position:relative;
+    z-index:  10;
+}
+
+.text h2{
+    font-size: 5em;
+    font-weight: 800;
+    line-height: 1em;
+    text-transform: uppercase;
+    font-family: 'Fredericka the Great', cursive;
+}
+
+.text h3 {
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 1em;
+    text-transform: uppercase;  
+    font-family: 'Fredericka the Great', cursive;
+}
+
+.text p{
+    font-size:1.1em;
+    margin: 20px 0;
+    font-weight: 400;
+    max-width: 800px;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.text a{
+    display: inline-block;
+    font-size: 1em;
+    background: #fff;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #111;
+    margin-top: 10px;
+    transition: 0.2s;
+    font-family: 'Fugaz One', cursive;
+}
+
+.text a:hover{
+    letter-spacing: 2px;
+    font-family: 'Fugaz One', cursive;
+}
+
+.social{
+    position: absolute;
+    bottom: 20px;
+    z-index:10;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.social li{
+    list-style: none;
+    display: inline-block;
+}
+
+.social li a {
+    display: inline-block;
+    width: 100px;
+    margin-right: 20px;
+    transition: 0.5s;
+    flex-direction: column;
+    color: #fff;
+    font-family: 'Ms Madi', cursive;
+    font-weight:bold;
+    text-decoration: none;
+    font-size: 3em;
+    text-align: center;
+}
+
+.social li a:hover{
+    transform: translateY(-15px);
+}
+
+.social li a img{
+    width: 100%;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu ul{
+    list-style: none;
+}
+
+.menu ul li{
+    margin-top: 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #111;
+    font-family: 'Racing Sans One', cursive;
+}
+
+.menu ul li a:hover{
+    color: #ff8ab7;
+    font-family: 'Racing Sans One', cursive;
+}
+
+@media(max-width: 991px){
+    .showcase, .showcase header{
+        padding: 40px;
+    }
+
+    .text h2{
+        font-size: 3em;
+    }
+
+    .text h3{
+        font-size: 2em;
+    }
+}
+        </style>
+
+    <!-- Icon Conf. START -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Icon Conf. END -->
+
+</body>
+</html>
